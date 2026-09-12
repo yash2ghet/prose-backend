@@ -8,6 +8,13 @@
       "when": 1787194086275,
       "tag": "0000_magical_ego",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788983773584,
+      "tag": "0001_open_shape",
+      "breakpoints": true
     }
   ]
 }

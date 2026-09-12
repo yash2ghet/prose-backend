@@ -1,9 +1,17 @@
-import { User } from "better-auth";
+import type { auth } from "../../lib/auth";
 
 declare global {
   namespace Express {
-    interface Request {
-      user?: User;
+    interface Locals {
+      session: Awaited<
+        ReturnType<typeof auth.api.getSession>
+      >;
+
+      user: NonNullable<
+        Awaited<
+          ReturnType<typeof auth.api.getSession>
+        >
+      >["user"];
     }
   }
 }
