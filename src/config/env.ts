@@ -14,7 +14,7 @@ const envSchema = z.object({
     .min(16, "BETTER_AUTH_SECRET should be at least 16 characters"),
   BETTER_AUTH_URL: z.url(),
   
-  FRONTEND_URL: z.url().optional(),
+  FRONTEND_URL: z.url(),
 });
 
 // Parse and validate process.env against the schema
