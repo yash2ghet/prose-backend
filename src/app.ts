@@ -20,7 +20,7 @@ const app = express();
 app.use(
   cors({
     origin: env.FRONTEND_URL, // Replace with your frontend's origin
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], // Specify allowed HTTP methods
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );
