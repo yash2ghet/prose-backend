@@ -13,14 +13,16 @@ import categoryRoutes from "./routes/category.routes";
 import tagRoutes from "./routes/tag.routes";
 import profileRoutes from "./routes/profile.routes";
 import dashboardRoutes from "./routes/dashboard.routes";
+import { env } from "./config/env";
 
 const app = express();
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
-  }),
+    origin: env.FRONTEND_URL, // Replace with your frontend's origin
+    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  })
 );
 
 app.use(express.json());
